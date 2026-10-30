@@ -494,6 +494,273 @@
           "duringSec": 60
         }
       ]
+    },
+    {
+      "subsystem": "session",
+      "caseKey": "idle_session_buildup",
+      "title": "空闲会话积压",
+      "description": "并发建立指定数量的数据库连接并保持空闲，模拟连接池泄漏或会话长期闲置。",
+      "injectorClass": "chaos.inject.IdleSessionBuildupInject",
+      "exampleArgs": "-mode fixed -count 20 -duration 60000",
+      "defaultMode": "fixed",
+      "allowedModes": [
+        "fixed",
+        "ramp",
+        "random_hold"
+      ],
+      "generatorProfiles": [
+        {
+          "id": 221,
+          "key": "idle_session_buildup_fixed",
+          "description": "DBChaos Idle Session Buildup",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "fixed",
+            "-count",
+            "20",
+            "-duration",
+            "60000"
+          ],
+          "duringSec": 60
+        },
+        {
+          "id": 222,
+          "key": "idle_session_buildup_ramp",
+          "description": "DBChaos Ramped Idle Session Buildup",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "ramp",
+            "-count",
+            "20",
+            "-duration",
+            "60000"
+          ],
+          "duringSec": 60
+        },
+        {
+          "id": 223,
+          "key": "idle_session_buildup_random_hold",
+          "description": "DBChaos Random-Hold Idle Sessions",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "random_hold",
+            "-count",
+            "20",
+            "-duration",
+            "60000",
+            "-min-hold",
+            "10000"
+          ],
+          "duringSec": 60
+        }
+      ]
+    },
+    {
+      "subsystem": "session",
+      "caseKey": "idle_transaction_buildup",
+      "title": "空闲事务积压",
+      "description": "读取专用实验表的一行后保持事务打开且会话空闲，模拟应用事务未及时结束；注入结束时回滚并关闭连接。",
+      "injectorClass": "chaos.inject.IdleTransactionBuildupInject",
+      "exampleArgs": "-table dbchaos_txn_demo -mode fixed -count 5 -duration 30000",
+      "defaultMode": "fixed",
+      "allowedModes": [
+        "fixed",
+        "ramp",
+        "random_hold"
+      ],
+      "generatorProfiles": [
+        {
+          "id": 224,
+          "key": "idle_transaction_buildup_fixed",
+          "description": "DBChaos Idle Transaction Buildup",
+          "category": "connection management",
+          "args": [
+            "-table",
+            "dbchaos_txn_demo",
+            "-mode",
+            "fixed",
+            "-count",
+            "5",
+            "-duration",
+            "30000"
+          ],
+          "duringSec": 30
+        },
+        {
+          "id": 225,
+          "key": "idle_transaction_buildup_ramp",
+          "description": "DBChaos Ramped Idle Transaction Buildup",
+          "category": "connection management",
+          "args": [
+            "-table",
+            "dbchaos_txn_demo",
+            "-mode",
+            "ramp",
+            "-count",
+            "5",
+            "-duration",
+            "30000"
+          ],
+          "duringSec": 30
+        },
+        {
+          "id": 226,
+          "key": "idle_transaction_buildup_random_hold",
+          "description": "DBChaos Random-Hold Idle Transactions",
+          "category": "connection management",
+          "args": [
+            "-table",
+            "dbchaos_txn_demo",
+            "-mode",
+            "random_hold",
+            "-count",
+            "5",
+            "-duration",
+            "30000",
+            "-min-hold",
+            "10000"
+          ],
+          "duringSec": 30
+        }
+      ]
+    },
+    {
+      "subsystem": "session",
+      "caseKey": "connection_auth_failure",
+      "title": "连接认证失败",
+      "description": "使用每次运行生成的虚构用户名尝试建立数据库连接，模拟认证阶段持续或突发被拒绝；不修改真实账号。",
+      "injectorClass": "chaos.inject.ConnectionAuthFailureInject",
+      "exampleArgs": "-mode serial -count 20 -interval 500",
+      "defaultMode": "serial",
+      "allowedModes": [
+        "serial",
+        "burst"
+      ],
+      "generatorProfiles": [
+        {
+          "id": 227,
+          "key": "connection_auth_failure_serial",
+          "description": "DBChaos Serial Authentication Failures",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "serial",
+            "-count",
+            "20",
+            "-interval",
+            "500"
+          ],
+          "duringSec": 10
+        },
+        {
+          "id": 228,
+          "key": "connection_auth_failure_burst",
+          "description": "DBChaos Burst Authentication Failures",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "burst",
+            "-count",
+            "20",
+            "-concurrency",
+            "10"
+          ],
+          "duringSec": 10
+        }
+      ]
+    },
+    {
+      "subsystem": "session",
+      "caseKey": "session_forced_termination",
+      "title": "会话被强制终止",
+      "description": "由 DBChaos 建立目标会话，再通过独立控制连接终止它们，验证数据库会话和事务资源清理；不实现应用重连。",
+      "injectorClass": "chaos.inject.SessionForcedTerminationInject",
+      "exampleArgs": "-mode serial -count 10 -interval 500",
+      "defaultMode": "serial",
+      "allowedModes": [
+        "serial",
+        "burst"
+      ],
+      "generatorProfiles": [
+        {
+          "id": 229,
+          "key": "session_forced_termination_serial",
+          "description": "DBChaos Serial Session Termination",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "serial",
+            "-count",
+            "10",
+            "-interval",
+            "500"
+          ],
+          "duringSec": 10
+        },
+        {
+          "id": 230,
+          "key": "session_forced_termination_burst",
+          "description": "DBChaos Burst Session Termination",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "burst",
+            "-count",
+            "20",
+            "-concurrency",
+            "10"
+          ],
+          "duringSec": 10
+        }
+      ]
+    },
+    {
+      "subsystem": "session",
+      "caseKey": "connection_handshake_stall",
+      "title": "连接握手停滞",
+      "description": "在 TCP 已建立但数据库协议初始化未完成时保持连接，模拟客户端或网络导致的握手停滞；不完成认证、不发送密码、不执行 SQL。",
+      "injectorClass": "chaos.inject.ConnectionHandshakeStallInject",
+      "exampleArgs": "-mode silent -count 10 -duration 60000",
+      "defaultMode": "silent",
+      "allowedModes": [
+        "silent",
+        "partial"
+      ],
+      "generatorProfiles": [
+        {
+          "id": 231,
+          "key": "connection_handshake_stall_silent",
+          "description": "DBChaos Silent Connection Handshake Stall",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "silent",
+            "-count",
+            "10",
+            "-duration",
+            "60000"
+          ],
+          "duringSec": 60
+        },
+        {
+          "id": 232,
+          "key": "connection_handshake_stall_partial",
+          "description": "DBChaos Partial Connection Handshake Stall",
+          "category": "connection management",
+          "args": [
+            "-mode",
+            "partial",
+            "-count",
+            "10",
+            "-duration",
+            "60000"
+          ],
+          "duringSec": 60
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="650" viewBox="0 0 1160 650">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="580.0" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="bold">连接认证失败 - burst（真实注入采样）</text>
+<rect x="100" y="95" width="346.7003689028556" height="455" fill="#eef2f7"/>
+<rect x="446.7003689028556" y="95" width="43.598643523424755" height="455" fill="#fff3df"/>
+<rect x="490.29901242628034" y="95" width="624.7009875737197" height="455" fill="#edf8ee"/>
+<line x1="100" y1="550.0" x2="1115" y2="550.0" stroke="#d9dee7"/>
+<text x="90" y="555.0" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#333">0</text>
+<line x1="100" y1="459.0" x2="1115" y2="459.0" stroke="#d9dee7"/>
+<text x="90" y="464.0" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#333">10</text>
+<line x1="100" y1="368.0" x2="1115" y2="368.0" stroke="#d9dee7"/>
+<text x="90" y="373.0" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#333">20</text>
+<line x1="100" y1="277.0" x2="1115" y2="277.0" stroke="#d9dee7"/>
+<text x="90" y="282.0" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#333">30</text>
+<line x1="100" y1="186.0" x2="1115" y2="186.0" stroke="#d9dee7"/>
+<text x="90" y="191.0" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#333">40</text>
+<line x1="100" y1="95.0" x2="1115" y2="95.0" stroke="#d9dee7"/>
+<text x="90" y="100.0" text-anchor="end" font-family="Arial,sans-serif" font-size="13" fill="#333">50</text>
+<line x1="100" y1="550" x2="1115" y2="550" stroke="#333"/>
+<line x1="100" y1="95" x2="100" y2="550" stroke="#333"/>
+<text x="273.3501844514278" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="14">注入前</text>
+<text x="468.499690664568" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="14">注入中</text>
+<text x="802.6495062131402" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="14">注入后</text>
+<line x1="100.0" y1="550" x2="100.0" y2="556" stroke="#333"/>
+<text x="100.0" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">0</text>
+<line x1="238.7" y1="550" x2="238.7" y2="556" stroke="#333"/>
+<text x="238.7" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">2</text>
+<line x1="377.4" y1="550" x2="377.4" y2="556" stroke="#333"/>
+<text x="377.4" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">4</text>
+<line x1="516.0" y1="550" x2="516.0" y2="556" stroke="#333"/>
+<text x="516.0" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">6</text>
+<line x1="654.7" y1="550" x2="654.7" y2="556" stroke="#333"/>
+<text x="654.7" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">8</text>
+<line x1="793.4" y1="550" x2="793.4" y2="556" stroke="#333"/>
+<text x="793.4" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">10</text>
+<line x1="932.1" y1="550" x2="932.1" y2="556" stroke="#333"/>
+<text x="932.1" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">12</text>
+<line x1="1070.8" y1="550" x2="1070.8" y2="556" stroke="#333"/>
+<text x="1070.8" y="573" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#333">14</text>
+<polyline points="100.0,550.0 100.0,550.0 169.4,550.0 238.9,550.0 308.3,550.0 377.8,550.0 459.7,550.0 460.6,540.9 460.6,531.8 460.6,522.7 460.7,513.6 460.7,504.5 460.7,495.4 460.8,486.3 460.8,477.2 460.8,468.1 460.8,459.0 461.1,449.9 461.2,440.8 461.2,431.7 461.3,422.6 461.3,413.5 461.3,404.4 461.5,395.3 461.9,386.2 462.0,377.1 462.0,368.0 462.0,358.9 462.0,349.8 462.0,340.7 462.1,331.6 462.1,322.5 462.1,313.4 462.2,304.3 462.3,295.2 462.4,286.1 462.4,277.0 462.4,267.9 462.5,258.8 462.5,249.7 462.6,240.6 462.6,231.5 462.6,222.4 462.7,213.3 462.8,204.2 462.9,195.1 462.9,186.0 463.0,176.9 463.0,167.8 463.1,158.7 463.1,149.6 463.2,140.5 463.2,131.4 463.2,122.3 463.2,113.2 463.3,104.1 463.4,95.0 490.3,95.0 490.3,95.0 559.7,95.0 629.1,95.0 698.5,95.0 768.0,95.0 837.4,95.0 906.8,95.0 976.2,95.0 1045.6,95.0 1115.0,95.0" fill="none" stroke="#c43d32" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="100.0,550.0 100.0,550.0 169.4,550.0 238.9,550.0 308.3,550.0 377.8,550.0 459.7,550.0 460.6,540.9 460.6,531.8 460.6,522.7 460.7,513.6 460.7,504.5 460.7,495.4 460.8,486.3 460.8,477.2 460.8,468.1 460.8,459.0 461.1,449.9 461.2,440.8 461.2,431.7 461.3,422.6 461.3,413.5 461.3,404.4 461.5,395.3 461.9,386.2 462.0,377.1 462.0,368.0 462.0,358.9 462.0,349.8 462.0,340.7 462.1,331.6 462.1,322.5 462.1,313.4 462.2,304.3 462.3,295.2 462.4,286.1 462.4,277.0 462.4,267.9 462.5,258.8 462.5,249.7 462.6,240.6 462.6,231.5 462.6,222.4 462.7,213.3 462.8,204.2 462.9,195.1 462.9,186.0 463.0,176.9 463.0,167.8 463.1,158.7 463.1,149.6 463.2,140.5 463.2,131.4 463.2,122.3 463.2,113.2 463.3,104.1 463.4,95.0 490.3,95.0 490.3,95.0 559.7,95.0 629.1,95.0 698.5,95.0 768.0,95.0 837.4,95.0 906.8,95.0 976.2,95.0 1045.6,95.0 1115.0,95.0" fill="none" stroke="#3976a8" stroke-width="2" stroke-dasharray="8 6" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="110" y1="596" x2="138" y2="596" stroke="#c43d32" stroke-width="3"/>
+<text x="146" y="601" font-family="Arial,sans-serif" font-size="13">认证拒绝累计数</text>
+<line x1="370" y1="596" x2="398" y2="596" stroke="#3976a8" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="406" y="601" font-family="Arial,sans-serif" font-size="13">完成尝试累计数</text>
+<text x="607.5" y="635" text-anchor="middle" font-family="Arial,sans-serif" font-size="15">时间（秒）</text>
+<text x="22" y="322.5" transform="rotate(-90 22 322.5)" text-anchor="middle" font-family="Arial,sans-serif" font-size="15">累计次数</text>
+</svg>

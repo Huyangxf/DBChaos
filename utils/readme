@@ -1,16 +1,27 @@
 常用用法：
 
 画最新一次 run
-python3 scripts/plot_tpcc_tpm.py
+python3 utils/plot_tpcc_tpm.py
 
 指定某次 run
-python3 scripts/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56
+python3 utils/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56
 
 按 10 秒分桶（更平滑）
-python3 scripts/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56 --interval-sec 10
+python3 utils/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56 --interval-sec 10
 
 跳过前几分钟
-python3 scripts/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56 --skip-minutes 2
+python3 utils/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56 --skip-minutes 2
 
 指定输出文件
-python3 scripts/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56 --output results/plots/tpcc_2026-04-15_22-35-56_10s.png
+python3 utils/plot_tpcc_tpm.py --run-prefix tpcc_2026-04-15_22-35-56 --output results/plots/tpcc_2026-04-15_22-35-56_10s.png
+
+DBChaos PostgreSQL 故障注入前 / 中 / 后时序图
+python3 utils/plot_injection_timeline.py --case lock
+python3 utils/plot_injection_timeline.py --case conn-storm --count 10
+python3 utils/plot_injection_timeline.py --case rollback --threads 2 --rate 0.9
+
+该脚本在 before / injecting / after 三个阶段采样 PostgreSQL 会话数、活动会话、锁等待、
+空闲事务及提交/回滚速率，输出 CSV 和 SVG；只依赖 Python 标准库与 psql。
+默认连接参数适用于 /home/yangxf/dbchaos-pg/socket:15432/chaos_test。
+默认将 CSV 和 SVG 保存到项目根目录的 static/yxf_demos/，可用 --output-dir 覆盖。
+rollback Case 会使用并最终删除 chaos_rollback_heavy 表；运行前请确认该表未保存其他数据。

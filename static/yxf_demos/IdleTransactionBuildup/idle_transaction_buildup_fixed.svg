@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="560" y="35" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold">空闲事务积压 - fixed（真实采样）</text>
+<rect x="90" y="80" width="116.79211004412144" height="450" fill="#eef2f7"/>
+<rect x="206.79211004412144" y="80" width="700.7526602647288" height="450" fill="#fff3df"/>
+<rect x="907.5447703088502" y="80" width="172.45522969114984" height="450" fill="#edf8ee"/>
+<line x1="90" y1="530.0" x2="1080" y2="530.0" stroke="#d9dee7"/>
+<text x="80" y="535.0" text-anchor="end" font-family="Arial" font-size="13">0</text>
+<line x1="90" y1="440.0" x2="1080" y2="440.0" stroke="#d9dee7"/>
+<text x="80" y="445.0" text-anchor="end" font-family="Arial" font-size="13">4</text>
+<line x1="90" y1="350.0" x2="1080" y2="350.0" stroke="#d9dee7"/>
+<text x="80" y="355.0" text-anchor="end" font-family="Arial" font-size="13">8</text>
+<line x1="90" y1="260.0" x2="1080" y2="260.0" stroke="#d9dee7"/>
+<text x="80" y="265.0" text-anchor="end" font-family="Arial" font-size="13">12</text>
+<line x1="90" y1="170.0" x2="1080" y2="170.0" stroke="#d9dee7"/>
+<text x="80" y="175.0" text-anchor="end" font-family="Arial" font-size="13">16</text>
+<line x1="90" y1="80.0" x2="1080" y2="80.0" stroke="#d9dee7"/>
+<text x="80" y="85.0" text-anchor="end" font-family="Arial" font-size="13">20</text>
+<line x1="90" y1="530" x2="1080" y2="530" stroke="#333"/>
+<line x1="90" y1="80" x2="90" y2="530" stroke="#333"/>
+<polyline points="90.0,530.0 102.1,530.0 114.2,530.0 126.2,530.0 138.3,530.0 150.4,530.0 162.4,530.0 174.5,530.0 186.6,530.0 198.6,530.0 210.7,530.0 222.8,80.0 234.9,80.0 247.0,80.0 259.0,80.0 271.1,80.0 283.2,80.0 295.3,80.0 307.4,80.0 319.4,80.0 331.5,80.0 343.6,80.0 355.6,80.0 367.7,80.0 379.8,80.0 391.9,80.0 403.9,80.0 416.0,80.0 428.1,80.0 440.2,80.0 452.3,80.0 464.3,80.0 476.4,80.0 488.5,80.0 500.5,80.0 512.6,80.0 524.7,80.0 536.8,80.0 548.9,80.0 560.9,80.0 573.0,80.0 585.1,80.0 597.1,80.0 609.2,80.0 621.3,80.0 633.4,80.0 645.4,80.0 657.5,80.0 669.6,80.0 681.6,80.0 693.7,80.0 705.8,80.0 717.8,80.0 729.9,80.0 742.0,80.0 754.1,80.0 766.1,80.0 778.2,80.0 790.3,80.0 802.4,80.0 814.4,80.0 826.5,80.0 838.6,80.0 850.7,80.0 862.7,80.0 874.8,80.0 886.9,80.0 898.9,80.0 911.0,80.0 923.1,530.0 935.2,530.0 947.3,530.0 959.3,530.0 971.4,530.0 983.5,530.0 995.5,530.0 1007.6,530.0 1019.6,530.0 1031.7,530.0 1043.8,530.0 1055.9,530.0 1067.9,530.0 1080.0,530.0" fill="none" stroke="#c43d32" stroke-width="4"/>
+<text x="148.39605502206072" y="62" text-anchor="middle" font-family="Arial">注入前</text>
+<text x="557.1684401764858" y="62" text-anchor="middle" font-family="Arial">注入中</text>
+<text x="993.7723851544251" y="62" text-anchor="middle" font-family="Arial">注入后</text>
+<text x="585.0" y="595" text-anchor="middle" font-family="Arial">时间（秒）</text>
+<text x="20" y="305.0" transform="rotate(-90 20 305.0)" text-anchor="middle" font-family="Arial">实际未结束事务数</text>
+<line x1="90.0" y1="530" x2="90.0" y2="536" stroke="#333"/>
+<text x="90.0" y="554" text-anchor="middle" font-family="Arial" font-size="13">0</text>
+<line x1="323.6" y1="530" x2="323.6" y2="536" stroke="#333"/>
+<text x="323.6" y="554" text-anchor="middle" font-family="Arial" font-size="13">20</text>
+<line x1="557.2" y1="530" x2="557.2" y2="536" stroke="#333"/>
+<text x="557.2" y="554" text-anchor="middle" font-family="Arial" font-size="13">40</text>
+<line x1="790.8" y1="530" x2="790.8" y2="536" stroke="#333"/>
+<text x="790.8" y="554" text-anchor="middle" font-family="Arial" font-size="13">60</text>
+<line x1="1024.3" y1="530" x2="1024.3" y2="536" stroke="#333"/>
+<text x="1024.3" y="554" text-anchor="middle" font-family="Arial" font-size="13">80</text>
+</svg>

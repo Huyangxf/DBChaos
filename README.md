@@ -49,6 +49,11 @@ DBChaos 当前按如下数据库内核子系统组织不利能力：
 - **连接风暴**：`max_connection / conn_storm`
 - **连接耗尽**：`max_connection / conn_exhaustion`
 - **会话执行线程池饱和**：`max_connection / thread_saturation`
+- **空闲会话积压**：`idle_session_buildup / fixed | ramp | random_hold`，覆盖固定保持、渐进建立和随机保持时长
+- **空闲事务积压**：`idle_transaction_buildup / fixed | ramp | random_hold`，读取专用实验表后保持只读事务和快照，结束时回滚；详见[使用说明](docs/idle_transaction_buildup.md)
+- **连接认证失败**：`connection_auth_failure / serial | burst`，使用每次运行生成的虚构用户名模拟持续或突发的认证拒绝，不修改真实账号；详见[使用说明](docs/connection_auth_failure.md)
+- **会话被强制终止**：`session_forced_termination / serial | burst`，由 DBChaos 建立目标会话，再通过控制连接终止并检查清理结果；不实现应用重连；详见[使用说明](docs/session_forced_termination.md)
+- **连接握手停滞**：`connection_handshake_stall / silent | partial`，在 TCP 已建立但数据库协议初始化未完成时保持连接；不完成认证、不发送密码、不执行 SQL；详见[使用说明](docs/connection_handshake_stall.md)
 
 ### SQL 编译与优化
 
